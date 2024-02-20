@@ -128,7 +128,9 @@ if(isset($_POST['email']) && isset($_POST['password']) ){
              if(mysqli_num_rows($result)>0){
                  session_start();
         $_SESSION['admin']= true;
-        header('Location: admdash.php');
+        //header('Location: admdash.php');
+        echo "<script>alert('Login Success'); window.location='admdash.php'</script>"; 
+
              }
              
    else{
