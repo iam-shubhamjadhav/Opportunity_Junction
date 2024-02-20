@@ -21,10 +21,10 @@ if(isset($_POST['submit'])){
 
     $msg = "Added New Announcement.";
 
-               echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+               
 
     $sql = "INSERT INTO anouncement VALUES (NULL,'$date', '$desc', '$link')";
-
+echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
     if($conn->query($sql) === true){
     } else {
         $msg = "Failed to add new announcement.";
