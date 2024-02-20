@@ -14,19 +14,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_POST['submit'])) {
+if(isset($_POST['submit'])){
     $date = $_POST['date'];
     $desc = $_POST['desc'];
     $link = $_POST['link'];
 
-    $sql = "INSERT INTO anouncement (date, desc, link) VALUES ('$date', '$desc', '$link')";
+    $msg = "Added New Announcement.";
 
-    if ($conn->query($sql) === true) {
-        $msg = "Announcement added successfully.";
-        echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+               echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+
+    $sql = "INSERT INTO anouncement VALUES (NULL,'$date', '$desc', '$link')";
+
+    if($conn->query($sql) === true){
     } else {
-        $msg = "Failed to add new announcement: " . $conn->error;
-        echo "<script>alert('Announcement Failed: $msg'); window.location='admdash.php'</script>";
+        $msg = "Failed to add new announcement.";
+        echo "<script>alert('Announcement Failed') ; window.location='admdash.php'</script>".$conn->error;
     }
 }
 
