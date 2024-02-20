@@ -8,7 +8,7 @@ $database="opportunity";
 $conn = new mysqli($servername, $username, $password,$database);
 
 // Create connection
-$conn = mysqli_connect('localhost','root','');
+
 
 // Check connection
 if ($conn->connect_error) {
