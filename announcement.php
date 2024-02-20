@@ -7,26 +7,30 @@
     $password = $_ENV['MYSQL_PASSWORD'];
     $database="opportunity";
     
-    $conn = new mysqli($servername, $username, $password,$database);
-    $msg = "";
+    $conn = new mysqli($servername, $username, $password, $database);
+$msg = "";
 
-    if(isset($_POST['submit'])){
-        $date = $_POST['date'];
-        $desc = $_POST['desc'];
-        $link = $_POST['link'];
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-        $msg = "Added New Announcement.";
+if (isset($_POST['submit'])) {
+    $date = $_POST['date'];
+    $desc = $_POST['desc'];
+    $link = $_POST['link'];
 
-                   echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+    $sql = "INSERT INTO announcement (date, description, link) VALUES ('$date', '$desc', '$link')";
 
-        $sql = "INSERT INTO anouncement VALUES (NULL,'$date', '$desc', '$link')";
-
-        if($conn->query($sql) === true){
-        } else {
-            $msg = "Failed to add new announcement.";
-            echo "<script>alert('Announcement Failed') ; window.location='admdash.php'</script>".$conn->error;
-        }
+    if ($conn->query($sql) === true) {
+        $msg = "Announcement added successfully.";
+        echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+    } else {
+        $msg = "Failed to add new announcement: " . $conn->error;
+        echo "<script>alert('Announcement Failed: $msg'); window.location='admdash.php'</script>";
     }
+}
+
+$conn->close();
 ?>
 
 
