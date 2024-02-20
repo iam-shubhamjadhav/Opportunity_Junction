@@ -123,7 +123,7 @@ $conn = new mysqli($servername, $username, $password,$database);
 if(isset($_POST['email']) && isset($_POST['password']) ){
     $email=$_POST['email'];
      $pass=$_POST['password'];
-   $sql = "select * from admin where email= '$email' and password = '$pass';";
+   $sql = "select * from admin where email= '$email' and password = '$pass'";
              $result = $conn->query($sql);
              if(mysqli_num_rows($result)>0){
                  session_start();
