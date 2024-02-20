@@ -1,5 +1,5 @@
 # Opportunity_Junction
-Project In Php, Services :Azure AI bot, Cloud Service 
+Project In Php, Azure Services :Azure App,MYSQL , Bot service
 
 Microsoft-Future-Ready-Talent-Virtual-Internship-Project
 __________________________________________________________________________________________________________________________________________
