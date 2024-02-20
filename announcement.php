@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $desc = $_POST['desc'];
     $link = $_POST['link'];
 
-    $sql = "INSERT INTO announcement (date, description, link) VALUES ('$date', '$desc', '$link')";
+    $sql = "INSERT INTO anouncement (date, description, link) VALUES ('$date', '$desc', '$link')";
 
     if ($conn->query($sql) === true) {
         $msg = "Announcement added successfully.";
