@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    $servername = "";
+    $servername = "apahe.mysql.database.azure.com";
     $username = $_ENV['MYSQL_USERNAME'];
     $password = $_ENV['MYSQL_PASSWORD'];
     $database="opportunity";
