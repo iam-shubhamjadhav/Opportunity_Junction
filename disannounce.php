@@ -46,13 +46,12 @@
 <div class="container">
     <h1 class="text-center">Announcements</h1>
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "opportunity";
+$servername = "";
+$username = $_ENV['MYSQL_USERNAME'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$database="opportunity";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password,$database);
 
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());

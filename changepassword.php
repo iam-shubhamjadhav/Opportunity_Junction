@@ -1,11 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "opportunity";
+$servername = "";
+$username = $_ENV['MYSQL_USERNAME'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$database="opportunity";
 
-// Establish database connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password,$database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }

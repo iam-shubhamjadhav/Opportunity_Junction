@@ -2,12 +2,12 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname="opportunity";
-
-    $conn = mysqli_connect($servername, $username, $password,$dbname);
+    $servername = "";
+    $username = $_ENV['MYSQL_USERNAME'];
+    $password = $_ENV['MYSQL_PASSWORD'];
+    $database="opportunity";
+    
+    $conn = new mysqli($servername, $username, $password,$database);
     $msg = "";
 
     if(isset($_POST['submit'])){

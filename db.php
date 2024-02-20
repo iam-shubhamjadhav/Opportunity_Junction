@@ -1,8 +1,12 @@
 <?php
 
 
+$servername = "";
+$username = $_ENV['MYSQL_USERNAME'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$database="opportunity";
 
-$con = mysqli_connect("localhost","root","","opportunity");
+$conn = new mysqli($servername, $username, $password,$database);
 	if (mysqli_connect_errno()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		die();

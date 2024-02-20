@@ -112,11 +112,12 @@
 
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database ="opportunity";
-$conn = mysqli_connect($servername, $username, $password, $database);
+$servername = "";
+$username = $_ENV['MYSQL_USERNAME'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$database="opportunity";
+
+$conn = new mysqli($servername, $username, $password,$database);
 	
     $result1 = "";
 if(isset($_POST['email']) && isset($_POST['password']) ){
