@@ -30,6 +30,6 @@ else
   
  $reg = "insert into usertable(email , password) values ('$name','$pass')";
     mysqli_query($conn, $reg);
- echo "<script>alert('Registered successfully'); window.location='main.php'</script>";
+ echo "<script>alert('Registered successfully'); window.location='index.php'</script>";
   }
 ?>
