@@ -34,7 +34,7 @@ Key Features :
 Future Enhancements :
 To enhance Opportunity Junction, we propose implementing user feedback integration, streamlining job applications, and introducing email notifications for updates and new opportunities. A built-in resume builder tool will help users craft professional resumes, while a centralized resource library offers guidance on career development. Social media integration will expand networking opportunities, and quick search filters will simplify job searches. These features aim to improve user engagement and satisfaction, making the platform more intuitive and productive. Through user feedback, we will continuously refine and prioritize enhancements, ensuring a seamless experience for job seekers. With streamlined processes and valuable resources, Opportunity Junction becomes a more effective tool for navigating the job market. These enhancements prioritize simplicity and productivity, empowering users to find their ideal career opportunities with ease.
 
-Core Azure Services :-
+## Core Azure Services :-
 
 
 Azure App Service:
@@ -45,7 +45,7 @@ Azure App Service:
 
 Azure AI Service 
 
-Azure Bot Service(Language Service):
+### Azure Bot Service(Language Service):
 
 Other Azure Technologies / Services
 
