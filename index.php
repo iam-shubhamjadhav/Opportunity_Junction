@@ -33,6 +33,17 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+    $(document).ready(function(){
+        
+        $('#chatbot-container').hide();
+
+     
+        $('#chatbot-toggle').click(function(){
+            $('#chatbot-container').toggle();
+        });
+    });
+</script>
 <style>
 body {
   margin: 0;
@@ -109,7 +120,7 @@ footer{
         }
         .chatbot-frame {
             width: 300px;
-            height: 400px;
+            height: 300px;
             border: none;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -150,7 +161,7 @@ footer{
         </div>
     </footer>
     <div class="chatbot-container">
-    <iframe src="https://webchat.botframework.com/embed/jobchatbot-bot?s=YOUR_SECRET_HERE" 
+    <iframe src="https://webchat.botframework.com/embed/jobchatbot-bot?s=4vKRPVpHOrI.hudYSENIO9VuSnOFCZJtKCGul92e3Er0SxSy2bP811I" 
             class="chatbot-frame"></iframe>
 </div>
 </div>
