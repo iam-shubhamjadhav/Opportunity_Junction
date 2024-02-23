@@ -19,13 +19,14 @@ if(isset($_POST['submit'])){
     $desc = $_POST['desc'];
     $link = $_POST['link'];
 
-    $msg = "Added New Announcement.";
+   
 
-               
+             $msg = "Added New Announcement.";   
 
     $sql = "INSERT INTO anouncement VALUES (NULL,'$date', '$desc', '$link')";
-echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
-    if($conn->query($sql) === true){
+
+    if($conn->query($sql) === true){echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+       
     } else {
         $msg = "Failed to add new announcement.";
         echo "<script>alert('Announcement Failed') ; window.location='admdash.php'</script>".$conn->error;
