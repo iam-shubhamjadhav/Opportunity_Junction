@@ -5,36 +5,53 @@
     $servername = "opportunityjunction.mysql.database.azure.com";
     $username = $_ENV['MYSQL_USERNAME'];
     $password = $_ENV['MYSQL_PASSWORD'];
-    $database="opportunity";
+    $database = "opportunity";
     
     $conn = new mysqli($servername, $username, $password, $database);
-$msg = "";
+    $msg = "";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if(isset($_POST['submit'])){
-    $date = $_POST['date'];
-    $desc = $_POST['desc'];
-    $link = $_POST['link'];
-
-   
-
-             $msg = "Added New Announcement.";   
-
-    $sql = "INSERT INTO anouncement VALUES ('$date', '$desc', '$link')";
-
-    if($conn->query($sql) === true){echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
-       
-    } else {
-        $msg = "Failed to add new announcement.";
-        echo "<script>alert('Announcement Failed') ; window.location='admdash.php'</script>".$conn->error;
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-}
 
-$conn->close();
+    if(isset($_POST['submit'])){
+        // Retrieve form data
+        $date = $_POST['date'];
+        $desc = $_POST['desc'];
+        $link = $_POST['link'];
+
+        // Prepare the SQL statement using a prepared statement
+        $sql = "INSERT INTO anouncement (date, description, link) VALUES (?, ?, ?)";
+
+        // Prepare the statement
+        $stmt = $conn->prepare($sql);
+
+        if ($stmt) {
+            // Bind parameters to the prepared statement
+            $stmt->bind_param("sss", $date, $desc, $link);
+
+            // Execute the prepared statement
+            if ($stmt->execute()) {
+                $msg = "Added New Announcement.";
+                echo "<script>alert('Announcement added successfully'); window.location='admdash.php'</script>";
+            } else {
+                $msg = "Failed to add new announcement.";
+                echo "<script>alert('Announcement Failed') ; window.location='admdash.php'</script>".$conn->error;
+            }
+
+            // Close the statement
+            $stmt->close();
+        } else {
+            // Error handling for prepared statement
+            $msg = "Prepared statement failed.";
+            echo "<script>alert('Prepared statement failed') ; window.location='admdash.php'</script>";
+        }
+    }
+
+    // Close the connection
+    $conn->close();
 ?>
+
 
 
 
