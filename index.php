@@ -44,6 +44,8 @@
         });
     });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
 body {
   margin: 0;
@@ -160,7 +162,7 @@ footer{
             <h6>copyright &copy;2024 OPPORTUNITY JUNCTION. designed by Shubham Jadhav</h6>
         </div>
     </footer>
-    <div class="chatbot-container">
+    <div class="chatbot-container" id="chatbot-container">
     <iframe src="https://webchat.botframework.com/embed/jobchatbot-bot?s=4vKRPVpHOrI.hudYSENIO9VuSnOFCZJtKCGul92e3Er0SxSy2bP811I" 
             class="chatbot-frame"></iframe>
 </div>
