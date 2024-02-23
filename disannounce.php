@@ -57,7 +57,7 @@ $conn = new mysqli($servername, $username, $password,$database);
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM anouncement ORDER BY date DESC";
+    $sql = "SELECT * FROM anouncement ORDER BY date DESCRIPTION";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
