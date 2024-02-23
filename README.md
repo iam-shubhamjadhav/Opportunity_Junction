@@ -55,11 +55,14 @@ Securely manages keys, secrets used in the application.
 
 Screenshots
 
-Azure App Service
-Description : Azure App Service provides a scalable and reliable hosting environment for Opportunity Junction, ensuring seamless .deployment and continuous availability to optimize the user experience .
-shubhamjadhv/Opportunity_Junction/Screenshots/App_service.jpg
- 
 
+Core Azure Services :-
+Azure App Service:
+Description : Azure App Service provides a scalable and reliable hosting environment for Opportunity Junction, ensuring seamless deployment and continuous availability to optimize the user experience
+
+![App_service](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/f868821d-cc27-4a6c-89c6-04b0719f963b)
+
+ 
 Final Project Statement
 
 
