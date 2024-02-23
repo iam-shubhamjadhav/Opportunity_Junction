@@ -1,4 +1,4 @@
-# Opportunity_Junction
+# Opportunity Junction :
  Opportunity Junction offers a comprehensive suite of features designed to streamline your job search experience. From curated job listings, we empower you to find the perfect match for your skills and aspirations. This platform also provides valuable resources such as resume tips, interview guidance, and career insights to support you every step of the way. Built using PHP and Azure services including Azure App Service, MySQL, and Bot Service, our platform enhances user engagement with responsive bot experiences.
 
 ## Microsoft-Future-Ready-Talent-Virtual-Internship-Project
