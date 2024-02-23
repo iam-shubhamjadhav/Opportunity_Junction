@@ -57,7 +57,7 @@ $conn = new mysqli($servername, $username, $password,$database);
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM anouncement ORDER BY date DESCRIPTION";
+    $sql = "SELECT * FROM anouncement ORDER BY date description";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -66,7 +66,7 @@ $conn = new mysqli($servername, $username, $password,$database);
             <div class="announcement-box">
                 <div class="announcement-date">Date: <?php echo $row["date"]; ?></div>
                 <div class="announcement-description">
-                    Opening: <?php echo $row["desc"]; ?> 
+                    Opening: <?php echo $row["description"]; ?> 
                     <?php if (!empty($row["link"])) { ?><br>Link :-
                         <a href="<?php echo $row["link"]; ?>" target="_blank">Click Here</a>
                     <?php } ?>
