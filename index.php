@@ -101,6 +101,19 @@ footer{
     word-spacing: 4px;
     text-transform: capitalize;
 }
+.chatbot-container {
+            position: fixed;
+            bottom: 50%;
+            right: 20px;
+            transform: translateY(50%);
+        }
+        .chatbot-frame {
+            width: 300px;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
 </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -136,6 +149,10 @@ footer{
             <h6>copyright &copy;2024 OPPORTUNITY JUNCTION. designed by Shubham Jadhav</h6>
         </div>
     </footer>
+    <div class="chatbot-container">
+    <iframe src="https://webchat.botframework.com/embed/jobchatbot-bot?s=YOUR_SECRET_HERE" 
+            class="chatbot-frame"></iframe>
+</div>
 </div>
 </body>
 </html>
