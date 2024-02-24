@@ -2,7 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once 'vendor/autoload.php';
+require_once 'php/vendor/autoload.php';
+
 
 use Azure\Storage\Blob\BlobRestProxy;
 use Azure\Storage\Blob\Models\CreateBlobOptions;
