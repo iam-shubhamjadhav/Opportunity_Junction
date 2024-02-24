@@ -16,12 +16,12 @@ if (isset($_POST['submit'])) {
     $allowTypes = array('pdf', 'docx');
 
     if (in_array($fileType, $allowTypes)) {
-        // File type is allowed, echo success message
-        $msg = "<script>alert('Submitted Sucessfully'); window.location='studash.php'</script>.";
+        // File type is allowed, set success message and redirect
+        $msg = "Submitted Successfully.";
+        echo "<script>alert('Submitted Successfully'); window.location='studash.php';</script>";
+        exit; // Prevent further execution
     } else {
         $msg = "Sorry, only PDF and DOCX files are allowed.";
     }
 }
 ?>
-
-
