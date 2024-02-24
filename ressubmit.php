@@ -2,19 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once 'php/vendor/autoload.php';
-
-
-use MicrosoftAzure\Storage\Blob\BlobRestProxy;
-
-use Azure\Storage\Blob\Models\CreateBlobOptions;
-
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=shubham;AccountKey=bPJNQN+VC6VndimOG7y1hKYZ6V5+m27U4q90V5CMCk01DbpQ8E9LDjgZ+yDjM/Auf+b6sV9PTGZE+ASt1lKigw==;EndpointSuffix=core.windows.net";
-$containerName = "resume";
-
-$blobClient = BlobRestProxy::createBlobService($connectionString);
-
-$msg = "Submitted successfully";
+$msg = ""; // Initialize message variable
 
 // Check if the form is submitted
 if (isset($_POST['submit'])) {
@@ -28,22 +16,27 @@ if (isset($_POST['submit'])) {
     $allowTypes = array('pdf', 'docx');
 
     if (in_array($fileType, $allowTypes)) {
-        // Upload file to Azure Blob Storage
-        try {
-            $content = fopen($fileTmpName, "r");
-            $options = new CreateBlobOptions();
-            $options->setContentType(mime_content_type($fileTmpName));
-
-            $blobClient->createBlockBlob($containerName, $fileName, $content, $options);
-
-            $msg = "Resume uploaded successfully.";
-            header("Location:studash.php");
-            exit();
-        } catch (Exception $e) {
-            $msg = "Failed to upload resume: " . $e->getMessage();
-        }
+        // File type is allowed, echo success message
+        $msg = "File uploaded successfully.";
     } else {
         $msg = "Sorry, only PDF and DOCX files are allowed.";
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form</title>
+</head>
+<body>
+    <h2>Upload Resume</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" accept=".pdf,.docx">
+        <input type="submit" name="submit" value="Upload">
+    </form>
+    <?php echo $msg; ?> <!-- Display message -->
+</body>
+</html>
