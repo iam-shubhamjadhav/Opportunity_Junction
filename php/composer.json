@@ -1,5 +1,6 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
-    }
+        "azure/storage-blob": "^12.0"
+    },
+    "minimum-stability": "dev"
 }
