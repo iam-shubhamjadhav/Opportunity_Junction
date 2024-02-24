@@ -27,12 +27,13 @@ In a rapidly evolving digital job market, Opportunity Junction aims to address t
 
 Opportunity Junction is a comprehensive online platform designed to empower students and freshers in their job search journey while facilitating efficient management of student data. This project aims to bridge the gap between aspiring candidates and job opportunities by providing a user-friendly interface for job seekers and robust administrative tools for managing student data and opportunity announcements.
 Whether a recent graduate or someone looking to make a career transition, Opportunity Junction is here to help you seize the opportunities that await. Join us on this exciting journey towards a brighter, more fulfilling future. Start exploring, start connecting, and let Opportunity Junction be your guide to success in the digital job landscape.
- Key Features :
+
+### Key Features :
 •	Empowers students and freshers by providing easy access to a diverse range of job opportunities tailored to their skills and career goals.
 •	Streamlines the job application process and enhances transparency between candidates and recruiters.
 •	Enables administrators to efficiently manage student data, track application progress, and make data-driven decisions to improve the platform's effectiveness.
 •	Fosters collaboration and community engagement by facilitating networking opportunities, career guidance, and mentorship initiatives.
-Future Enhancements :
+### Future Enhancements :
 To enhance Opportunity Junction, we propose implementing user feedback integration, streamlining job applications, and introducing email notifications for updates and new opportunities. A built-in resume builder tool will help users craft professional resumes, while a centralized resource library offers guidance on career development. Social media integration will expand networking opportunities, and quick search filters will simplify job searches. These features aim to improve user engagement and satisfaction, making the platform more intuitive and productive. Through user feedback, we will continuously refine and prioritize enhancements, ensuring a seamless experience for job seekers. With streamlined processes and valuable resources, Opportunity Junction becomes a more effective tool for navigating the job market. These enhancements prioritize simplicity and productivity, empowering users to find their ideal career opportunities with ease.
 
 ## Core Azure Services :-
