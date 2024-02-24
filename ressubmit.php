@@ -10,7 +10,7 @@ use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 use Azure\Storage\Blob\Models\CreateBlobOptions;
 
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=shubham;AccountKey=bPJNQN+VC6VndimOG7y1hKYZ6V5+m27U4q90V5CMCk01DbpQ8E9LDjgZ+yDjM/Auf+b6sV9PTGZE+ASt1lKigw==;EndpointSuffix=core.windows.net";
-$containerName = "shubham";
+$containerName = "resume";
 
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
