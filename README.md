@@ -75,13 +75,18 @@ Description :Azure Bot Service empowers Opportunity Junction with interactive an
 Provided below is a screenshot displaying the operational website, offering a real-time view of the project in action for your reference and review.
 ![live_demo](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/5da0b877-4c91-4afe-88aa-5c1e9a4a6c16)
 
+![user](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/478e6f78-6578-4e31-bb76-6ffc76ea7e1a)
+![admin](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/833a8a7b-5348-42b9-97d8-d6e9309ea75a)
+
+
+
 ### Resource Visualizer :
 
 Description:
 
 Enclosed is a screenshot of the resource visualizer, providing a comprehensive overview of the utilized resources for reference and documentation purposes.
 
-![Resource_visualizer](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/b7870562-565e-4fb5-ae40-56e960f01d8f)
+![Resource_visualizer](https://github.com/shubhamjadhv/Opportunity_Junction/assets/111505205/49444e2f-975e-479f-800b-84a012722962)
 
 
 ### Final Project Statement :
