@@ -7,7 +7,7 @@
 
 ## Project Details :
 ### Project Demo URL : https://opportunityjunction.azurewebsites.net/
-### Demo Video URL : https://drive.google.com/file/d/1RYbfsDpikqQn1JE_dRRIwT72-q9OPWIs/view
+### Demo Video URL : https://drive.google.com/file/d/1kzyy5PcoUC7FJyR06LWzZHgeQaRrAsvD/view?usp=sharing
 ### Github Repository URL : https://github.com/shubhamjadhv/Opportunity_Junction
 ### Industry : Ed-tech
 
